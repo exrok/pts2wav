@@ -10,7 +10,7 @@ fn main() {
 
     let pts: Vec<(f64,f64)> = file.lines().map(|line| {
         let line = line.expect("Read Error");
-        let mut nums = line.split(',');
+        let mut nums = line.split(' ');
         (nums.next().unwrap().parse::<f64>().unwrap(),
         nums.next().unwrap().parse::<f64>().unwrap())
     }).inspect(|&(x,y)| {
